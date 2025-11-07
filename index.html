@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>Gauri Advani - Senior Product Manager</title>
-  <meta name="description" content="Senior Product Manager with 4.5 years of experience in Product Development, Launches, and Stakeholder Management">
+  <title>Gauri Advani - Product Manager</title>
+  <meta name="description" content=" Product Manager with 4.5 years of experience in Product Development, Launches, and Stakeholder Management">
   <meta name="author" content="Gauri Advani">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"/>
   <link rel="icon" type="image/png" href="favicon.png">
@@ -249,6 +249,44 @@
       font-size: 14px;
       opacity: 0.9;
       font-weight: 500;
+    }
+ /* Nutshell Section */
+    #nutshell-section {
+      background: #18181b;
+      border-radius: 16px;
+      padding: 32px 24px 24px 24px;
+      margin: 40px 0 0 0;
+      color: #fff;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.3);
+    }
+    #nutshell-section h2 {
+      font-size: 2rem;
+      color: #ffffff;
+      margin-bottom: 20px;
+      font-weight: 700;
+    }
+    #nutshell-tabs {
+      margin-bottom: 22px;
+    }
+    #nutshell-tabs .tab {
+      background: #26263a;
+      border: none;
+      padding: 10px 22px;
+      border-radius: 22px;
+      color: #fff;
+      font-size: 1rem;
+      margin-right: 8px;
+      font-weight: 600;
+      opacity: 0.85;
+      cursor: pointer;
+      transition: background 0.2s, opacity 0.2s;
+      outline: none;
+    }
+    #nutshell-tabs .tab.active,
+    #nutshell-tabs .tab:hover {
+      background: #fad961;
+      color: #23233b;
+      opacity: 1;
     }
 
     .skills-container {
@@ -815,16 +853,20 @@
         </div>
       </section>
 
-      <!-- Skills Section -->
-      <section class="section">
-        <div class="section-header">
-          <h2 class="section-title">Skills & Expertise</h2>
-          <p class="section-subtitle">
-            A comprehensive toolkit for end-to-end product management
-          </p>
-        </div>
-        <div class="skills-container">
-          <div class="skill-category">
+</section>
+
+  <section id="nutshell-section">
+    <h2>Me in a nutshell</h2>
+    <div id="nutshell-tabs">
+      <button class="tab active" data-tab="skills"><i class="fa fa-briefcase"></i> Skills</button>
+      <button class="tab" data-tab="experience"><i class="fa fa-suitcase"></i> Experience</button>
+      <button class="tab" data-tab="education"><i class="fa fa-graduation-cap"></i> Education</button>
+    </div>
+    <div id="nutshell-content">
+      <div class="tab-content" id="tab-skills" style="display:block;">
+        <div class="card-grid">
+
+            <div class="skill-category">
             <h3><i class="fas fa-lightbulb"></i> Product Management</h3>
             <ul class="skill-list">
               <li>Developing user stories & roadmapping</li>
@@ -888,7 +930,28 @@
             </ul>
           </div>
         </div>
-      </section>
+      <div class="tab-content" id="tab-experience" style="display:none;">
+        <div class="card-grid">
+          <div class="card"><span class="card-icon">🏢</span><b>Product Manager, BYJU’S (Think & Learn Pvt. Ltd.)</b>
+            <p>May,2020 - Nov,2023<br>Handled complete product launches, driving increased user engagement on online platforms and boosting sales leads through strategic feature enhancements and optimized user journeys</p>
+          </div>
+          <div class="card"><span class="card-icon">🏢</span><b>Project Manager, BYJU’S (Think & Learn Pvt. Ltd.)</b>
+            <p>Jun,2019 - Apr,2020<br>Drove strategic initiatives to boost user retention by combining data-driven insights with cross-functional execution, improving user experience, engagement, and long-term platform loyalty.</p>
+          </div>
+        </div>
+      </div>
+      <div class="tab-content" id="tab-education" style="display:none;">
+        <div class="card-grid">
+          <div class="card"><span class="card-icon">🎓</span><b>DTU – Delhi Technological University</b>
+            <p>Masters of Business Administration<br>2017 - 2019</p>
+             </div>
+             <div class="card"><span class="card-icon">🎓</span><b>The IIS University</b>
+            <p>Bachelor of Commerce<br>2013 - 2016</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
        <!-- Projects Section -->
       <section class="section">
@@ -1330,5 +1393,3 @@
   </script>
 </body>
 </html>
-
-
