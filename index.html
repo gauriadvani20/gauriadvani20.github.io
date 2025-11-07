@@ -1,158 +1,332 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <title>Gauri Advani Portfolio</title>
-  <meta name="description" content="Product Management Portfolio of Gauri Advani">
-  <meta name="author" content="Gauri Advani">
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
-  <link rel="icon" type="image/png" href="favicon.png">
-  <!-- Normalize & Google Fonts -->
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
-  <!-- Font Awesome Icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <meta charset="utf-8" />
+  <title>Gauri Advani - Product Manager Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Product Manager portfolio of Gauri Advani" />
+  <link rel="icon" type="image/png" href="favicon.png" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+
   <style>
     body {
-      /* Modern soft gradient background */
-      background: linear-gradient(135deg, #f7f9fb 0%, #e4f0fc 100%);
-      font-family: 'Roboto', sans-serif;
-      color: #222;
       margin: 0;
-      line-height: 1.8;
+      font-family: 'Roboto', sans-serif;
+      line-height: 1.6;
+      background: linear-gradient(135deg, #18181b 0%, #23233b 100%);
+      color: #fff;
+      min-height: 100vh;
+      padding: 0;
     }
-    header {
+    a { color: #fad961; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    #container {
+      max-width: 800px;
+      margin: 40px auto 0;
+      padding: 24px;
+      background: rgba(40,40,50,0.92);
+      border-radius: 16px;
+      box-shadow: 0 8px 40px rgba(0,0,0,0.4);
+    }
+    header#header {
       text-align: center;
-      padding: 48px 20px 24px 20px;
+      margin-bottom: 30px;
     }
     header img {
-      width: 120px;
-      height: 120px;
-      object-fit: cover;
+      width: 120px; height: 120px;
       border-radius: 50%;
-      border: 4px solid #d4eaf7;
-      box-shadow: 0 2px 16px rgba(0,0,0,0.08);
-      margin-bottom: 18px;
+      border: 3px solid #fad961;
+      margin-bottom: 15px;
+      object-fit: cover;
       background: #fff;
     }
     header h1 {
+      font-size: 2.6rem;
+      font-weight: 700;
       margin: 0;
-      font-size: 2.2rem;
-      font-weight: 700;
-      letter-spacing: 1px;
+      color: #fad961;
     }
-    .container {
-      max-width: 800px;
-      margin: 0 auto;
-      padding: 32px 16px;
-    }
-    section.card {
-      background: #fff;
+    /* About Me */
+    #about-me h2 { font-size: 1.5rem; color: #fad961; }
+    #about-me p { font-size: 1.1rem; color: #eee; }
+
+    /* Nutshell Section */
+    #nutshell-section {
+      background: #18181b;
       border-radius: 16px;
-      box-shadow: 0 2px 18px rgba(180,210,240,0.15);
-      margin-bottom: 32px;
-      padding: 24px 32px;
+      padding: 32px 24px 24px 24px;
+      margin: 40px 0 0 0;
+      color: #fff;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.3);
     }
-    section.card h2 {
-      font-size: 1.35rem;
-      color: #3183ce;
-      margin-bottom: 12px;
+    #nutshell-section h2 {
+      font-size: 2rem;
+      color: #fad961;
+      margin-bottom: 20px;
       font-weight: 700;
     }
-    .btn-group {
-      text-align: center;
-      margin-top: 24px;
+    #nutshell-tabs {
+      margin-bottom: 22px;
     }
-    .btn-group button {
-      background: #3183ce;
-      color: #fff;
+    #nutshell-tabs .tab {
+      background: #26263a;
       border: none;
-      border-radius: 7px;
-      font-size: 16px;
       padding: 10px 22px;
-      margin: 0 6px 10px 6px;
+      border-radius: 22px;
+      color: #fff;
+      font-size: 1rem;
+      margin-right: 8px;
+      font-weight: 600;
+      opacity: 0.85;
       cursor: pointer;
-      box-shadow: 0 1px 3px rgba(49,131,206,0.08);
-      transition: background 0.21s;
-      display: inline-flex;
+      transition: background 0.2s, opacity 0.2s;
+      outline: none;
+    }
+    #nutshell-tabs .tab.active,
+    #nutshell-tabs .tab:hover {
+      background: #fad961;
+      color: #23233b;
+      opacity: 1;
+    }
+    .card-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+    .card {
+      background: #23233b;
+      border-radius: 12px;
+      padding: 22px;
+      min-width: 215px;
+      flex: 1 1 220px;
+      max-width: 330px;
+      margin-bottom: 8px;
+      color: #fff;
+      font-size: 1rem;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.10);
+      display: flex;
+      flex-direction: column;
+      border-left: 5px solid #fad961;
+    }
+    .card-icon {
+      font-size: 1.6rem;
+      margin-bottom: 8px;
+    }
+    /* Projects section */
+    #projects-section {
+      margin: 46px 0 0 0;
+    }
+    #projects-section h2 {
+      font-size: 2rem;
+      color: #fad961;
+      font-weight: 700;
+      margin-bottom: 14px;
+    }
+    .projects-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+    .project-card {
+      background: #23233b;
+      border-radius: 12px;
+      padding: 22px;
+      flex: 1 1 250px;
+      margin-bottom: 10px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.10);
+      display: flex;
+      flex-direction: column;
+      border-left: 5px solid #fad961;
+    }
+    .project-title {
+      color: #fad961;
+      font-weight: 600;
+      font-size: 1.18rem;
+      margin-bottom: 6px;
+    }
+    .project-desc {
+      color: #eee;
+      margin-bottom: 8px;
+      font-size: 1rem;
+    }
+    .project-link {
+      margin-top: auto;
+      display: inline-block;
+      color: #fad961;
+      font-weight: 600;
+      font-size: 0.98rem;
+    }
+    /* Contact and Links */
+    #contact-section {
+      margin: 44px 0 0 0;
+      padding: 26px;
+      background: #2e2e41;
+      border-radius: 14px;
+      text-align: center;
+    }
+    #contact-section h2 {
+      color: #fad961;
+      margin-bottom: 14px;
+      font-size: 1.35rem;
+      font-weight: 700;
+    }
+    .contact-btns {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+    .contact-btns button {
+      background: transparent;
+      border: 2px solid #fad961;
+      color: #fad961;
+      padding: 10px 20px;
+      border-radius: 50px;
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+      display: flex;
       align-items: center;
       gap: 8px;
+      transition: background 0.3s, color 0.3s;
+      margin-bottom: 10px;
     }
-    .btn-group button:hover {
-      background: #205b8e;
+    .contact-btns button:hover {
+      background: #fad961;
+      color: #23233b;
     }
     footer {
+      margin-top: 38px;
+      font-size: 0.97rem;
+      opacity: 0.6;
       text-align: center;
-      color: #aaa;
-      padding: 32px 0 18px;
-      font-size: 0.97em;
-      background: transparent;
+      color: #fff;
+      letter-spacing: 0.5px;
+    }
+    @media (max-width: 900px) {
+      #container { padding: 12px; }
     }
     @media (max-width: 600px) {
-      section.card { padding: 18px 10px; }
-      header img { width: 80px; height: 80px; }
+      .card-grid, .projects-grid { flex-direction: column; }
+      header img { width: 86px; height: 86px; }
+      header h1 { font-size: 2rem; }
     }
   </style>
 </head>
+
 <body>
-  <header>
-    <img src="Profile.png" alt="Profile Image">
+<div id="container">
+  <header id="header">
+    <img src="Profile.png" alt="Gauri Advani">
     <h1>Gauri Advani</h1>
   </header>
-  <div class="container">
-    <!-- About Me -->
-    <section class="card" id="about-me">
-      <h2>About Me</h2>
-      <p>
-        Experienced Product Manager with a background in Business Administration from DTU and 4.5 years leading product development, launches, and stakeholder management at Byju's. Passionate about building innovative solutions that deliver customer impact.
-      </p>
-    </section>
-    
-    <!-- Experience Section -->
-    <section class="card" id="experience">
-      <h2>Product Management Experience</h2>
-      <ul>
-        <li>Led multiple B2C platform and CMS launches at Byju's.</li>
-        <li>Managed customer feedback, sales funnels (workshops, scholarships, AI chatbot), and cross-functional teams.</li>
-        <li>Strong track record of channelizing initiatives to meet KPIs and drive growth.</li>
-      </ul>
-    </section>
 
-    <!-- Projects/Portfolio Section -->
-    <section class="card" id="projects">
-      <h2>Highlighted Projects</h2>
-      <ul>
-        <li><strong>Platform Revamp:</strong> Spearheaded redesign for improved user retention and engagement.</li>
-        <li><strong>Workshop Funnel:</strong> Built and scaled workshop sales funnel for targeted product launches.</li>
-        <li><strong>AI Chatbot Integration:</strong> Deployed new AI-based chatbot for customer support and onboarding.</li>
-      </ul>
-    </section>
+  <section id="about-me">
+    <h2>About Me</h2>
+    <p>
+      4.5 years of experience in Product Development, Product Launches and Stakeholder Management with a background in Business Administration from DTU has equipped me with the skills and knowledge to work as a Product Manager. I am passionate about creating and developing innovative solutions that address customer needs. As a Product Manager at Byju's, I led the launch of multiple B2C Platform and CMS products along with channelising Sales funnel (such as Workshops, Scholarships, AI based chatbot), handling Customer ratings and feedback, and working cross-functionally and collaboratively with internal and external stakeholders.
+    </p>
+  </section>
 
-    <!-- Skills Section -->
-    <section class="card" id="skills">
-      <h2>Key Skills</h2>
-      <ul>
-        <li>Product Strategy & Execution</li>
-        <li>Stakeholder Management</li>
-        <li>User-Centric Design Thinking</li>
-        <li>Data Analytics & Reporting</li>
-        <li>Cross-Functional Leadership</li>
-      </ul>
-    </section>
-
-    <!-- Contact Links Section -->
-    <section class="card" id="contact">
-      <h2>Contact & Links</h2>
-      <div class="btn-group">
-        <button onclick="window.open('Gauri Advani Resume.pdf','_blank')"><i class="fa fa-file-pdf-o"></i> Resume</button>
-        <button onclick="window.location.href='mailto:gauriadvani20@gmail.com'"><i class="fa fa-envelope"></i> Email</button>
-        <button onclick="window.open('https://www.linkedin.com/in/gauri-advani-87ba73148','_blank')"><i class="fa fa-linkedin"></i> LinkedIn</button>
+  <section id="nutshell-section">
+    <h2>Me in a nutshell</h2>
+    <div id="nutshell-tabs">
+      <button class="tab active" data-tab="skills"><i class="fa fa-briefcase"></i> Skills</button>
+      <button class="tab" data-tab="experience"><i class="fa fa-suitcase"></i> Experience</button>
+      <button class="tab" data-tab="education"><i class="fa fa-graduation-cap"></i> Education</button>
+    </div>
+    <div id="nutshell-content">
+      <div class="tab-content" id="tab-skills" style="display:block;">
+        <div class="card-grid">
+          <div class="card"><span class="card-icon">💼</span><b>Product Management</b>
+            <p>Developing user stories, Roadmapping, Backlog prioritization, Stakeholder management, Market analysis</p>
+          </div>
+          <div class="card"><span class="card-icon">⚙️</span><b>Technical Proficiency</b>
+            <p>AWS, Data science tools (Python, R), Implementing machine learning models</p>
+          </div>
+          <div class="card"><span class="card-icon">🗂️</span><b>Project Management</b>
+            <p>Agile methodology, Project tools (JIRA, Trello), Sprint planning, Cross-functional coordination</p>
+          </div>
+          <div class="card"><span class="card-icon">🎨</span><b>UX</b>
+            <p>User research, Usability testing, Persona development, Journey mapping</p>
+          </div>
+          <div class="card"><span class="card-icon">💰</span><b>Pricing</b>
+            <p>Pricing models, Cost analysis, Pricing elasticity expert</p>
+          </div>
+          <div class="card"><span class="card-icon">🗣️</span><b>Communication</b>
+            <p>Facilitating workshops, Presenting to stakeholders, Writing clear documentation</p>
+          </div>
+          <div class="card"><span class="card-icon">🌐</span><b>Languages</b>
+            <p>English, Hindi, French</p>
+          </div>
+        </div>
       </div>
-    </section>
-  </div>
+      <div class="tab-content" id="tab-experience" style="display:none;">
+        <div class="card-grid">
+          <div class="card"><span class="card-icon">🏢</span><b>Product Manager, Byju's</b>
+            <p>2021 - 2025<br>Led launches of B2C platforms, CMS products, managed sales funnels, collaborated with cross-functional teams.</p>
+          </div>
+          <div class="card"><span class="card-icon">🏢</span><b>Assistant Product Manager, XYZ Corp</b>
+            <p>2019 - 2021<br>Coordinated platform updates, worked with engineering and design teams to enhance user experience.</p>
+          </div>
+        </div>
+      </div>
+      <div class="tab-content" id="tab-education" style="display:none;">
+        <div class="card-grid">
+          <div class="card"><span class="card-icon">🎓</span><b>DTU – Delhi Technological University</b>
+            <p>Bachelor of Business Administration<br>2015 - 2019</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects-section">
+    <h2>Highlighted Projects</h2>
+    <div class="projects-grid">
+      <div class="project-card">
+        <span class="project-title">AI Chatbot Launch</span>
+        <p class="project-desc">Designed and launched an AI-driven customer support chatbot, improving resolution time by 35% and customer satisfaction by 20% for Byju's B2C users.</p>
+        <a class="project-link" href="#" target="_blank"><i class="fa fa-external-link"></i> View Details</a>
+      </div>
+      <div class="project-card">
+        <span class="project-title">Scholarship Portal Development</span>
+        <p class="project-desc">Led end-to-end development of a scholarship portal enabling 10,000+ student applications, including workflow automation and CRM integration.</p>
+        <a class="project-link" href="#" target="_blank"><i class="fa fa-external-link"></i> View Details</a>
+      </div>
+      <div class="project-card">
+        <span class="project-title">B2C Platform Overhaul</span>
+        <p class="project-desc">Managed overhaul of Byju's main B2C platform UI and backend, resulting in increased user growth and positive user ratings.</p>
+        <a class="project-link" href="#" target="_blank"><i class="fa fa-external-link"></i> View Details</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact-section">
+    <h2>Contact & Links</h2>
+    <div class="contact-btns">
+      <button onclick="window.open('Gauri Advani Resume.pdf', '_blank')"><i class="fa fa-file-pdf-o"></i> Resume</button>
+      <button onclick="window.location.href='mailto:gauriadvani20@gmail.com'"><i class="fa fa-envelope"></i> Email</button>
+      <button onclick="window.open('https://www.linkedin.com/in/gauri-advani-87ba73148', '_blank')"><i class="fa fa-linkedin"></i> LinkedIn</button>
+    </div>
+  </section>
+
   <footer>
-    &copy; 2025 Gauri Advani. Built with ❤️ for Product Management.
+    &copy; 2025 Gauri Advani. All rights reserved.
   </footer>
+</div>
+
+<script>
+  document.querySelectorAll('.tab').forEach(function(tab) {
+    tab.addEventListener('click', function(){
+      document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+      this.classList.add('active');
+      var target = 'tab-' + this.getAttribute('data-tab');
+      document.querySelectorAll('.tab-content').forEach(c => c.style.display = 'none');
+      document.getElementById(target).style.display = 'block';
+    });
+  });
+</script>
 </body>
 </html>
-
