@@ -1,59 +1,158 @@
 <!doctype html>
-<html>
-  <head>
-    <!-- Page setup -->
-    <meta charset="utf-8">
-    <title>Your title here</title>
-    <meta name="description" content="A brief description of your site for search engines">
-    <meta name="author" content="Information about the author here">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"/>
-    <link rel="icon" type="image/png" href="favicon.png">
-    <!-- Stylesheets -->
-    <!-- Reset default styles and add support for google fonts -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet" type="text/css" />
-    <link href="http://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css" />
-    <!-- Font Awesome Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <!-- Custom styles -->
-    <link href="style.css" rel="stylesheet" type="text/css" />
-    <!-- jQuery -->
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>    
-  </head>
-  <body>
-    <header id="header">
-      <img src="Profile.png" alt="Profile Image">
-      <h1>Gauri Advani</h1>
-      <!-- Removed menu links as requested -->
-    </header>
-    <div id="container">
-      <div class="inner">
-        <div id="content"> 
-          <!-- Added About Me section -->
-          <section id="about-me">
-            <h2>About Me:</h2>
-            <p>
-              4.5 years of experience in Product Development, Product Launches and Stakeholder Management with a background in Business Administration from DTU has equipped me with the skills and knowledge to work as a Product Manager. I am passionate about creating and developing innovative solutions that addresses customer needs. As a Product Manager in Byju's, I led the launch of multiple B2C Platform and CMS products along with channelising Sales funnel (such as Workshops, Scholarships, AI based chatbot), handling Customer ratings and feedbacks, working cross-functionally and collaboratively with internal and external stakeholders.
-            </p>
-          </section>
-          <!-- Buttons for Resume, Email, and LinkedIn with icons -->
-          <section id="contact-buttons" style="margin-top: 20px;">
-            <button onclick="window.open('Gauri Advani Resume.pdf', '_blank')" style="margin-right: 10px; padding: 10px 15px; font-size: 16px; cursor: pointer;">
-              <i class="fa fa-file-pdf-o" aria-hidden="true"></i> Resume
-            </button>
-            <button onclick="window.location.href='mailto:gauriadvani20@gmail.com'" style="margin-right: 10px; padding: 10px 15px; font-size: 16px; cursor: pointer;">
-              <i class="fa fa-envelope" aria-hidden="true"></i> Email
-            </button>
-            <button onclick="window.open('https://www.linkedin.com/in/gauri-advani-87ba73148', '_blank')" style="padding: 10px 15px; font-size: 16px; cursor: pointer;">
-              <i class="fa fa-linkedin" aria-hidden="true"></i> LinkedIn
-            </button>
-          </section>
-        </div>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Gauri Advani Portfolio</title>
+  <meta name="description" content="Product Management Portfolio of Gauri Advani">
+  <meta name="author" content="Gauri Advani">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+  <link rel="icon" type="image/png" href="favicon.png">
+  <!-- Normalize & Google Fonts -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style>
+    body {
+      /* Modern soft gradient background */
+      background: linear-gradient(135deg, #f7f9fb 0%, #e4f0fc 100%);
+      font-family: 'Roboto', sans-serif;
+      color: #222;
+      margin: 0;
+      line-height: 1.8;
+    }
+    header {
+      text-align: center;
+      padding: 48px 20px 24px 20px;
+    }
+    header img {
+      width: 120px;
+      height: 120px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 4px solid #d4eaf7;
+      box-shadow: 0 2px 16px rgba(0,0,0,0.08);
+      margin-bottom: 18px;
+      background: #fff;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2.2rem;
+      font-weight: 700;
+      letter-spacing: 1px;
+    }
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 32px 16px;
+    }
+    section.card {
+      background: #fff;
+      border-radius: 16px;
+      box-shadow: 0 2px 18px rgba(180,210,240,0.15);
+      margin-bottom: 32px;
+      padding: 24px 32px;
+    }
+    section.card h2 {
+      font-size: 1.35rem;
+      color: #3183ce;
+      margin-bottom: 12px;
+      font-weight: 700;
+    }
+    .btn-group {
+      text-align: center;
+      margin-top: 24px;
+    }
+    .btn-group button {
+      background: #3183ce;
+      color: #fff;
+      border: none;
+      border-radius: 7px;
+      font-size: 16px;
+      padding: 10px 22px;
+      margin: 0 6px 10px 6px;
+      cursor: pointer;
+      box-shadow: 0 1px 3px rgba(49,131,206,0.08);
+      transition: background 0.21s;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .btn-group button:hover {
+      background: #205b8e;
+    }
+    footer {
+      text-align: center;
+      color: #aaa;
+      padding: 32px 0 18px;
+      font-size: 0.97em;
+      background: transparent;
+    }
+    @media (max-width: 600px) {
+      section.card { padding: 18px 10px; }
+      header img { width: 80px; height: 80px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="Profile.png" alt="Profile Image">
+    <h1>Gauri Advani</h1>
+  </header>
+  <div class="container">
+    <!-- About Me -->
+    <section class="card" id="about-me">
+      <h2>About Me</h2>
+      <p>
+        Experienced Product Manager with a background in Business Administration from DTU and 4.5 years leading product development, launches, and stakeholder management at Byju's. Passionate about building innovative solutions that deliver customer impact.
+      </p>
+    </section>
+    
+    <!-- Experience Section -->
+    <section class="card" id="experience">
+      <h2>Product Management Experience</h2>
+      <ul>
+        <li>Led multiple B2C platform and CMS launches at Byju's.</li>
+        <li>Managed customer feedback, sales funnels (workshops, scholarships, AI chatbot), and cross-functional teams.</li>
+        <li>Strong track record of channelizing initiatives to meet KPIs and drive growth.</li>
+      </ul>
+    </section>
+
+    <!-- Projects/Portfolio Section -->
+    <section class="card" id="projects">
+      <h2>Highlighted Projects</h2>
+      <ul>
+        <li><strong>Platform Revamp:</strong> Spearheaded redesign for improved user retention and engagement.</li>
+        <li><strong>Workshop Funnel:</strong> Built and scaled workshop sales funnel for targeted product launches.</li>
+        <li><strong>AI Chatbot Integration:</strong> Deployed new AI-based chatbot for customer support and onboarding.</li>
+      </ul>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="card" id="skills">
+      <h2>Key Skills</h2>
+      <ul>
+        <li>Product Strategy & Execution</li>
+        <li>Stakeholder Management</li>
+        <li>User-Centric Design Thinking</li>
+        <li>Data Analytics & Reporting</li>
+        <li>Cross-Functional Leadership</li>
+      </ul>
+    </section>
+
+    <!-- Contact Links Section -->
+    <section class="card" id="contact">
+      <h2>Contact & Links</h2>
+      <div class="btn-group">
+        <button onclick="window.open('Gauri Advani Resume.pdf','_blank')"><i class="fa fa-file-pdf-o"></i> Resume</button>
+        <button onclick="window.location.href='mailto:gauriadvani20@gmail.com'"><i class="fa fa-envelope"></i> Email</button>
+        <button onclick="window.open('https://www.linkedin.com/in/gauri-advani-87ba73148','_blank')"><i class="fa fa-linkedin"></i> LinkedIn</button>
       </div>
-    </div>
-    <footer>  
-      Footer region
-    </footer>
-    <!-- Load additional JS scripts here -->
-    <script type="text/javascript" src="script.js"></script>
-  </body>
+    </section>
+  </div>
+  <footer>
+    &copy; 2025 Gauri Advani. Built with ❤️ for Product Management.
+  </footer>
+</body>
 </html>
+
