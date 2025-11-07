@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <title>Gauri Advani - Product Manager</title>
-  <meta name="description" content=" Product Manager with 4.5 years of experience in Product Development, Launches, and Stakeholder Management">
+  <meta name="description" content="Product Manager with 4.5 years of experience in Product Development, Launches, and Stakeholder Management">
   <meta name="author" content="Gauri Advani">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"/>
   <link rel="icon" type="image/png" href="favicon.png">
@@ -250,43 +250,56 @@
       opacity: 0.9;
       font-weight: 500;
     }
- /* Nutshell Section */
-    #nutshell-section {
-      background: #18181b;
-      border-radius: 16px;
-      padding: 32px 24px 24px 24px;
-      margin: 40px 0 0 0;
-      color: #fff;
-      box-shadow: 0 4px 16px rgba(0,0,0,0.3);
+
+    /* Nutshell Section Styles */
+    .nutshell-tabs {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      margin-bottom: 40px;
+      flex-wrap: wrap;
     }
-    #nutshell-section h2 {
-      font-size: 2rem;
-      color: #ffffff;
-      margin-bottom: 20px;
-      font-weight: 700;
-    }
-    #nutshell-tabs {
-      margin-bottom: 22px;
-    }
-    #nutshell-tabs .tab {
-      background: #26263a;
-      border: none;
-      padding: 10px 22px;
-      border-radius: 22px;
-      color: #fff;
-      font-size: 1rem;
-      margin-right: 8px;
+
+    .nutshell-tabs .tab {
+      background: linear-gradient(135deg, #f8f9ff 0%, #fff 100%);
+      border: 2px solid #e8ecff;
+      padding: 14px 28px;
+      border-radius: 50px;
+      color: #667eea;
+      font-size: 16px;
       font-weight: 600;
-      opacity: 0.85;
       cursor: pointer;
-      transition: background 0.2s, opacity 0.2s;
+      transition: all 0.3s ease;
       outline: none;
+      display: flex;
+      align-items: center;
+      gap: 10px;
     }
-    #nutshell-tabs .tab.active,
-    #nutshell-tabs .tab:hover {
-      background: #fad961;
-      color: #23233b;
-      opacity: 1;
+
+    .nutshell-tabs .tab i {
+      font-size: 18px;
+    }
+
+    .nutshell-tabs .tab:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px rgba(102, 126, 234, 0.2);
+      border-color: #667eea;
+    }
+
+    .nutshell-tabs .tab.active {
+      background: linear-gradient(135deg, #667eea, #764ba2);
+      color: white;
+      border-color: #667eea;
+      box-shadow: 0 8px 20px rgba(102, 126, 234, 0.3);
+    }
+
+    .tab-content {
+      display: none;
+    }
+
+    .tab-content.active {
+      display: block;
+      animation: fadeIn 0.5s ease-out;
     }
 
     .skills-container {
@@ -357,6 +370,61 @@
       color: #667eea;
       font-weight: bold;
       margin-right: 10px;
+    }
+
+    .experience-card, .education-card {
+      background: linear-gradient(135deg, #f8f9ff 0%, #fff 100%);
+      padding: 35px;
+      border-radius: 20px;
+      border: 2px solid #f0f0f0;
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+      margin-bottom: 25px;
+    }
+
+    .experience-card::before, .education-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 4px;
+      background: linear-gradient(90deg, #667eea, #764ba2);
+    }
+
+    .experience-card:hover, .education-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 15px 40px rgba(102, 126, 234, 0.2);
+      border-color: #667eea;
+    }
+
+    .experience-card h3, .education-card h3 {
+      font-size: 22px;
+      font-weight: 700;
+      color: #1a1a1a;
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .experience-card h3 i, .education-card h3 i {
+      color: #667eea;
+      font-size: 24px;
+    }
+
+    .experience-card .date, .education-card .date {
+      font-size: 14px;
+      color: #667eea;
+      font-weight: 600;
+      margin-bottom: 15px;
+    }
+
+    .experience-card p, .education-card p {
+      font-size: 15px;
+      color: #555;
+      line-height: 1.7;
     }
 
      /* Projects Section */
@@ -782,6 +850,16 @@
       .cta-section h2 {
         font-size: 32px;
       }
+
+      .nutshell-tabs {
+        flex-direction: column;
+        align-items: stretch;
+      }
+
+      .nutshell-tabs .tab {
+        width: 100%;
+        justify-content: center;
+      }
     }
   </style>
 </head>
@@ -853,105 +931,131 @@
         </div>
       </section>
 
-</section>
+      <!-- Me in a Nutshell Section -->
+      <section class="section">
+        <div class="section-header">
+          <h2 class="section-title">Me in a Nutshell</h2>
+          <p class="section-subtitle">
+            A comprehensive overview of my professional journey
+          </p>
+        </div>
+        
+        <div class="nutshell-tabs">
+          <button class="tab active" data-tab="skills">
+            <i class="fas fa-briefcase"></i> Skills
+          </button>
+          <button class="tab" data-tab="experience">
+            <i class="fas fa-suitcase"></i> Experience
+          </button>
+          <button class="tab" data-tab="education">
+            <i class="fas fa-graduation-cap"></i> Education
+          </button>
+        </div>
 
-  <section id="nutshell-section">
-    <h2>Me in a nutshell</h2>
-    <div id="nutshell-tabs">
-      <button class="tab active" data-tab="skills"><i class="fa fa-briefcase"></i> Skills</button>
-      <button class="tab" data-tab="experience"><i class="fa fa-suitcase"></i> Experience</button>
-      <button class="tab" data-tab="education"><i class="fa fa-graduation-cap"></i> Education</button>
-    </div>
-    <div id="nutshell-content">
-      <div class="tab-content" id="tab-skills" style="display:block;">
-        <div class="card-grid">
+        <div class="tab-content active" id="tab-skills">
+          <div class="skills-container">
+            <div class="skill-category">
+              <h3><i class="fas fa-lightbulb"></i> Product Management</h3>
+              <ul class="skill-list">
+                <li>Developing user stories & roadmapping</li>
+                <li>Backlog prioritization (RICE Method)</li>
+                <li>Go-to-market strategy</li>
+                <li>Product-market fit validation</li>
+                <li>Post-release analysis</li>
+              </ul>
+            </div>
 
             <div class="skill-category">
-            <h3><i class="fas fa-lightbulb"></i> Product Management</h3>
-            <ul class="skill-list">
-              <li>Developing user stories & roadmapping</li>
-              <li>Backlog prioritization (RICE Method)</li>
-              <li>Go-to-market strategy</li>
-              <li>Product-market fit validation</li>
-              <li>Post-release analysis</li>
-            </ul>
-          </div>
+              <h3><i class="fas fa-chart-line"></i> Analytics & Data</h3>
+              <ul class="skill-list">
+                <li>Data visualization (Tableau, Power BI)</li>
+                <li>A/B testing & experimentation design</li>
+                <li>KPI/metric definition & tracking</li>
+                <li>Front-end/back-end architecture understanding</li>
+                <li>API/integration knowledge</li>
+              </ul>
+            </div>
 
-          <div class="skill-category">
-            <h3><i class="fas fa-chart-line"></i> Analytics & Data</h3>
-            <ul class="skill-list">
-              <li>Data visualization (Tableau, Power BI)</li>
-              <li>A/B testing & experimentation design</li>
-              <li>KPI/metric definition & tracking</li>
-              <li>Front-end/back-end architecture understanding</li>
-              <li>API/integration knowledge</li>
-            </ul>
-          </div>
+            <div class="skill-category">
+              <h3><i class="fas fa-tasks"></i> Project Management</h3>
+              <ul class="skill-list">
+                <li>Agile & Scrum methodology</li>
+                <li>Project tools (JIRA, Notion)</li>
+                <li>Sprint planning</li>
+                <li>Cross-functional coordination</li>
+                <li>Timeline and milestone tracking</li>
+              </ul>
+            </div>
 
-          <div class="skill-category">
-            <h3><i class="fas fa-tasks"></i> Project Management</h3>
-            <ul class="skill-list">
-              <li>Agile & Scrum methodology</li>
-              <li>Project tools (JIRA, Notion)</li>
-              <li>Sprint planning</li>
-              <li>Cross-functional coordination</li>
-              <li>Timeline and milestone tracking</li>
-            </ul>
-          </div>
+            <div class="skill-category">
+              <h3><i class="fas fa-users"></i> User Research</h3>
+              <ul class="skill-list">
+                <li>User research & usability testing</li>
+                <li>Persona development</li>
+                <li>Journey mapping</li>
+                <li>Customer journey optimization</li>
+              </ul>
+            </div>
 
-          <div class="skill-category">
-            <h3><i class="fas fa-users"></i> User Research</h3>
-            <ul class="skill-list">
-              <li>User research & usability testing</li>
-              <li>Persona development</li>
-              <li>Journey mapping</li>
-              <li>Customer journey optimization</li>
-            </ul>
-          </div>
+            <div class="skill-category">
+              <h3><i class="fas fa-palette"></i> Design & UX</h3>
+              <ul class="skill-list">
+                <li>Wireframing & prototyping (Figma, Balsamiq)</li>
+                <li>Interaction design basics</li>
+                <li>Mobile-first & responsive design</li>
+                <li>Customer journey optimization</li>
+              </ul>
+            </div>
 
-          <div class="skill-category">
-            <h3><i class="fas fa-palette"></i> Design & UX</h3>
-            <ul class="skill-list">
-              <li>Wireframing & prototyping (Figma, Balsamiq)</li>
-              <li>Interaction design basics</li>
-              <li>Mobile-first & responsive design</li>
-              <li>Customer journey optimization</li>
-            </ul>
-          </div>
-
-          <div class="skill-category">
-            <h3><i class="fas fa-comments"></i> Leadership & Communication</h3>
-            <ul class="skill-list">
-              <li>Storytelling with data</li>
-              <li>Conflict resolution & negotiation</li>
-              <li>Executive stakeholder communication</li>
-              <li>Mentoring and coaching teams</li>
-              <li>Product onboarding</li>
-            </ul>
+            <div class="skill-category">
+              <h3><i class="fas fa-comments"></i> Leadership & Communication</h3>
+              <ul class="skill-list">
+                <li>Storytelling with data</li>
+                <li>Conflict resolution & negotiation</li>
+                <li>Executive stakeholder communication</li>
+                <li>Mentoring and coaching teams</li>
+                <li>Product onboarding</li>
+              </ul>
+            </div>
           </div>
         </div>
-      <div class="tab-content" id="tab-experience" style="display:none;">
-        <div class="card-grid">
-          <div class="card"><span class="card-icon">🏢</span><b>Product Manager, BYJU’S (Think & Learn Pvt. Ltd.)</b>
-            <p>May,2020 - Nov,2023<br>Handled complete product launches, driving increased user engagement on online platforms and boosting sales leads through strategic feature enhancements and optimized user journeys</p>
+
+        <div class="tab-content" id="tab-experience">
+          <div class="experience-card">
+            <h3><i class="fas fa-briefcase"></i> Product Manager</h3>
+            <div class="date">BYJU'S (Think & Learn Pvt. Ltd.) | May 2020 - Nov 2023</div>
+            <p>
+              Handled complete product launches, driving increased user engagement on online platforms and boosting sales leads through strategic feature enhancements and optimized user journeys. Led cross-functional teams to deliver multiple B2C Platform and CMS products, while channelizing sales funnels through Workshops, Scholarships, and AI-based chatbots.
+            </p>
           </div>
-          <div class="card"><span class="card-icon">🏢</span><b>Project Manager, BYJU’S (Think & Learn Pvt. Ltd.)</b>
-            <p>Jun,2019 - Apr,2020<br>Drove strategic initiatives to boost user retention by combining data-driven insights with cross-functional execution, improving user experience, engagement, and long-term platform loyalty.</p>
+
+          <div class="experience-card">
+            <h3><i class="fas fa-briefcase"></i> Project Manager</h3>
+            <div class="date">BYJU'S (Think & Learn Pvt. Ltd.) | Jun 2019 - Apr 2020</div>
+            <p>
+              Drove strategic initiatives to boost user retention by combining data-driven insights with cross-functional execution, improving user experience, engagement, and long-term platform loyalty. Focused on analyzing user behavior patterns and implementing targeted improvements.
+            </p>
           </div>
         </div>
-      </div>
-      <div class="tab-content" id="tab-education" style="display:none;">
-        <div class="card-grid">
-          <div class="card"><span class="card-icon">🎓</span><b>DTU – Delhi Technological University</b>
-            <p>Masters of Business Administration<br>2017 - 2019</p>
-             </div>
-             <div class="card"><span class="card-icon">🎓</span><b>The IIS University</b>
-            <p>Bachelor of Commerce<br>2013 - 2016</p>
+
+        <div class="tab-content" id="tab-education">
+          <div class="education-card">
+            <h3><i class="fas fa-graduation-cap"></i> Masters of Business Administration</h3>
+            <div class="date">DTU – Delhi Technological University | 2017 - 2019</div>
+            <p>
+              Specialized in business strategy, product management, and organizational leadership. Developed strong foundation in analytical thinking, market research, and strategic planning that has been instrumental in my product management career.
+            </p>
+          </div>
+
+          <div class="education-card">
+            <h3><i class="fas fa-graduation-cap"></i> Bachelor of Commerce</h3>
+            <div class="date">The IIS University | 2013 - 2016</div>
+            <p>
+              Built fundamental knowledge in business administration, accounting, and economics. This foundation provided essential understanding of business operations and financial principles.
+            </p>
           </div>
         </div>
-      </div>
-    </div>
-  </section>
+      </section>
 
        <!-- Projects Section -->
       <section class="section">
@@ -1357,6 +1461,28 @@
       section.style.transform = 'translateY(30px)';
       section.style.transition = 'all 0.8s ease-out';
       observer.observe(section);
+    });
+
+    // Tab functionality for Nutshell section
+    document.querySelectorAll('.nutshell-tabs .tab').forEach(function(tab) {
+      tab.addEventListener('click', function() {
+        // Remove active class from all tabs
+        document.querySelectorAll('.nutshell-tabs .tab').forEach(t => t.classList.remove('active'));
+        
+        // Add active class to clicked tab
+        this.classList.add('active');
+        
+        // Get the target tab content
+        const target = this.getAttribute('data-tab');
+        
+        // Hide all tab contents
+        document.querySelectorAll('.tab-content').forEach(content => {
+          content.classList.remove('active');
+        });
+        
+        // Show target tab content
+        document.getElementById('tab-' + target).classList.add('active');
+      });
     });
 
     // Modal Functions
