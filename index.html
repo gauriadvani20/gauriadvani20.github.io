@@ -685,6 +685,23 @@
       font-size: 20px;
     }
 
+    .modal-list ul {
+      list-style: none;
+      margin-top: 10px;
+      padding-left: 20px;
+    }
+
+    .modal-list ul li {
+      padding: 8px 0 8px 25px;
+      border-bottom: none;
+      font-size: 15px;
+    }
+
+    .modal-list ul li::before {
+      content: '◦';
+      font-size: 18px;
+    }
+
     .modal-metrics {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -727,6 +744,41 @@
       border-radius: 20px;
       font-size: 13px;
       font-weight: 600;
+    }
+
+    /* Results table styling */
+    .results-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+      font-size: 15px;
+    }
+
+    .results-table th,
+    .results-table td {
+      border: 1px solid #e0e0e0;
+      padding: 12px;
+      text-align: left;
+    }
+
+    .results-table th {
+      background: linear-gradient(135deg, #f8f9ff, #ffffff);
+      color: #667eea;
+      font-weight: 700;
+    }
+
+    .results-table td:nth-child(2),
+    .results-table td:nth-child(3),
+    .results-table td:nth-child(4) {
+      text-align: right;
+    }
+
+    .results-table tbody tr:nth-child(even) {
+      background: #fafafa;
+    }
+
+    .results-table tbody tr:hover {
+      background: #f8f9ff;
     }
 
     .languages-section {
@@ -859,6 +911,15 @@
       .nutshell-tabs .tab {
         width: 100%;
         justify-content: center;
+      }
+
+      .results-table {
+        font-size: 13px;
+      }
+
+      .results-table th,
+      .results-table td {
+        padding: 8px;
       }
     }
   </style>
@@ -1192,79 +1253,118 @@
       <div class="modal-header">
         <button class="modal-close" onclick="closeModal('project1')">&times;</button>
         <h2 class="modal-title">Improved Sales Funnel via Workshop</h2>
-        <p class="modal-subtitle">AI-Powered Sales Optimization at Byju's</p>
+        <p class="modal-subtitle">Byju's Exam Preparation Platform</p>
       </div>
       <div class="modal-body">
         <div class="modal-section">
           <h3 class="modal-section-title">
-            <i class="fas fa-bullseye"></i> Project Overview
+            <i class="fas fa-bullseye"></i> 📌 Overview
           </h3>
-          <p>
-            This project focused on revolutionizing the sales funnel for Byju's exam preparation platform by implementing an AI-based chatbot and optimizing the entire customer journey from initial contact to conversion. The goal was to improve lead quality, reduce conversion time, and enhance the overall user experience during the sign-up process.
-          </p>
+          <p><strong>Goal:</strong> Improve sales lead quality and shorten the conversion cycle for new sign-ups on our exam preparation platform.</p>
+          <p><strong>Role:</strong> Product Manager</p>
+          <p><strong>Timeline:</strong> Q3 2021 – Q1 2022</p>
+          <p><strong>Team:</strong> PM, Sales Ops, Design, Engineering, Marketing</p>
         </div>
 
         <div class="modal-section">
           <h3 class="modal-section-title">
-            <i class="fas fa-tasks"></i> Key Responsibilities
+            <i class="fas fa-exclamation-triangle"></i> Problem Statement
           </h3>
           <ul class="modal-list">
-            <li>Led cross-functional team of 12 members including engineers, designers, and data analysts</li>
-            <li>Designed and implemented AI chatbot conversation flows using NLP and machine learning</li>
-            <li>Conducted extensive A/B testing to optimize funnel conversion rates at each stage</li>
-            <li>Integrated CRM systems with sales funnel for seamless lead tracking and management</li>
-            <li>Developed comprehensive analytics dashboard for real-time performance monitoring</li>
-            <li>Collaborated with sales team to align product features with sales requirements</li>
+            <li>Sales teams were receiving low-quality leads through Salesforce.</li>
+            <li>Majority of new sign-ups were not genuinely interested in purchasing courses.</li>
+            <li>This led to low conversion rates (6–7%) and delayed conversions (avg. 7 days) post-signup.</li>
           </ul>
         </div>
 
         <div class="modal-section">
           <h3 class="modal-section-title">
-            <i class="fas fa-chart-line"></i> Impact & Results
+            <i class="fas fa-bullseye"></i> Goal & Metric
           </h3>
-          <div class="modal-metrics">
-            <div class="modal-metric-card">
-              <div class="modal-metric-value">40%</div>
-              <div class="modal-metric-label">Increase in Lead Quality</div>
-            </div>
-            <div class="modal-metric-card">
-              <div class="modal-metric-value">30%</div>
-              <div class="modal-metric-label">Reduction in Conversion Time</div>
-            </div>
-            <div class="modal-metric-card">
-              <div class="modal-metric-value">25%</div>
-              <div class="modal-metric-label">Improvement in User Engagement</div>
-            </div>
-            <div class="modal-metric-card">
-              <div class="modal-metric-value">5000+</div>
-              <div class="modal-metric-label">Monthly New Sign-ups</div>
-            </div>
-          </div>
+          <ul class="modal-list">
+            <li>Improve lead-to-conversion quality.</li>
+            <li>Reduce time-to-conversion from 7 → 3 days.</li>
+          </ul>
         </div>
 
         <div class="modal-section">
           <h3 class="modal-section-title">
-            <i class="fas fa-cogs"></i> Technologies & Tools
+            <i class="fas fa-cogs"></i> Key Skills
           </h3>
           <div class="tech-stack">
-            <span class="tech-tag">AI/ML</span>
-            <span class="tech-tag">Natural Language Processing</span>
-            <span class="tech-tag">Python</span>
-            <span class="tech-tag">Tableau</span>
-            <span class="tech-tag">CRM Integration</span>
-            <span class="tech-tag">A/B Testing</span>
-            <span class="tech-tag">Analytics Dashboard</span>
-            <span class="tech-tag">JIRA</span>
+            <span class="tech-tag">Product Management</span>
+            <span class="tech-tag">User Research</span>
+            <span class="tech-tag">Sales Flow</span>
+            <span class="tech-tag">Stakeholder Management</span>
+            <span class="tech-tag">GTM</span>
+            <span class="tech-tag">UAT</span>
           </div>
         </div>
 
         <div class="modal-section">
           <h3 class="modal-section-title">
-            <i class="fas fa-lightbulb"></i> Key Learnings
+            <i class="fas fa-tasks"></i> Description
           </h3>
-          <p>
-            This project taught me the importance of data-driven decision making in product development. By continuously analyzing user behavior and funnel metrics, we were able to make iterative improvements that significantly impacted business outcomes. The integration of AI technology with traditional sales processes demonstrated how innovation can drive measurable business results.
-          </p>
+          <p>To identify and engage high-intent users early, I proposed and launched a Workshop Funnel — a guided qualification mechanism embedded in the onboarding journey.</p>
+          
+          <p><strong>Key Actions:</strong></p>
+          <ul class="modal-list">
+            <li>Introduced a "Workshop" card on the homepage, visible immediately after signup.</li>
+            <li>Created exam-specific workshops (e.g., "Top Tips for Cracking SSC Exams") to attract motivated learners.</li>
+            <li>Scheduled workshops within 2–3 days post-signup to maintain engagement.</li>
+            <li>Sent automated nudges and push notifications to drive attendance.</li>
+            <li>Qualified leads based on workshop participation:
+              <ul>
+                <li>Watched ≥ 30 minutes → high intent</li>
+                <li>Auto-synced to Salesforce for priority sales follow-up</li>
+              </ul>
+            </li>
+          </ul>
+
+          <p>This flow helped the sales team focus on genuinely interested users and personalize conversations based on the workshop attended.</p>
+        </div>
+
+        <div class="modal-section">
+          <h3 class="modal-section-title">
+            <i class="fas fa-chart-line"></i> Result
+          </h3>
+          <ul class="modal-list">
+            <li>+40% increase in qualified leads in Salesforce</li>
+            <li>+6% absolute increase in conversion rate (6–7% → 13%)</li>
+            <li>Signup-to-conversion time reduced from 7 days to 3 days</li>
+            <li>Improved sales efficiency through better prioritization</li>
+          </ul>
+
+          <table class="results-table">
+            <thead>
+              <tr>
+                <th>Metric</th>
+                <th>Before</th>
+                <th>Target</th>
+                <th>After</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Lead-to-conversion rate</td>
+                <td>6–7%</td>
+                <td>12–13%</td>
+                <td>✅ 13%</td>
+              </tr>
+              <tr>
+                <td>Signup-to-conversion time</td>
+                <td>7 days</td>
+                <td>3 days</td>
+                <td>✅ 3 days</td>
+              </tr>
+              <tr>
+                <td>Qualified leads (Salesforce)</td>
+                <td>Baseline</td>
+                <td>+30%</td>
+                <td>✅ +40%</td>
+              </tr>
+            </tbody>
+          </table>
         </div>
       </div>
     </div>
